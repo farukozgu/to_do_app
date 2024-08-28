@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+}
+body {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4c3bcf;
+  border-radius: 10px;
+}
+
+.toDoSection {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  min-height: 200px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.toDoSection h1 {
+  font-size: 24px;
+  padding-bottom: 1rem;
+}
+
+.taskAddDiv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.textInput {
+  background-color: #f8e8ee;
+  border-radius: 16px;
+  padding: 9px 12px;
+  width: 100%;
+  border: none;
+  font-size: 17px;
+}
+.addBtn {
+  background-color: #4c3bcf;
+  border: none;
+  border-radius: 6px;
+  padding: 9px;
+  min-width: 120px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.addBtn:hover {
+  opacity: 80%;
+}
+ul {
+  padding-top: 1rem;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+ul li {
+  list-style: none;
+  padding: 12px 8px 12px 50px;
+  font-size: 17px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  left: 5px;
+  top: 8px;
+  background-image: url(./assets/unchecked.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(./assets/checked.svg);
+}
+ul span {
+  max-height: 20px;
+}
+
+#alert {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+ul li img {
+  max-width: 25px;
+}
+#clear {
+  background-color: #4c3bcf;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  float: right;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+#clear:hover {
+  opacity: 80%;
+}
